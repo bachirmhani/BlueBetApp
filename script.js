@@ -1,30 +1,29 @@
-const translations = {
-    en: { title: "Account Settings", btn: "Enter Dashboard", load: "Loading...", user: "Username" },
-    ar: { title: "إعدادات الحساب", btn: "دخول للداشبورد", load: "جاري التحميل...", user: "اسم المستخدم" }
+const dictionary = {
+    en: { title: "Account Settings", btn: "Enter Dashboard", user: "Username" },
+    ar: { title: "إعدادات الحساب", btn: "دخول للداشبورد", user: "اسم المستخدم" }
 };
 
-function changeLanguage() {
-    const lang = document.getElementById('lang-select').value;
-    if(translations[lang]) {
-        document.getElementById('settings-title').innerText = translations[lang].title;
-        document.getElementById('entry-btn').innerText = translations[lang].btn;
-        document.getElementById('username').placeholder = translations[lang].user;
-        document.body.dir = (lang === 'ar') ? 'rtl' : 'ltr';
+function updateLang() {
+    const l = document.getElementById('lang-select').value;
+    if(dictionary[l]) {
+        document.getElementById('st-title').innerText = dictionary[l].title;
+        document.getElementById('entry-btn').innerText = dictionary[l].btn;
+        document.getElementById('username').placeholder = dictionary[l].user;
+        document.body.dir = (l === 'ar') ? 'rtl' : 'ltr';
     }
 }
 
-function generateID() {
-    let id = "";
-    for(let i = 0; i < 10; i++) {
-        id += Math.floor(Math.random() * 10);
-    }
-    return id;
+function makeID() {
+    let res = "";
+    for(let i=0; i<10; i++) res += Math.floor(Math.random()*10);
+    return res;
 }
 
 window.onload = () => {
-    document.getElementById('user-id').value = "ID: " + generateID();
+    document.getElementById('user-id').value = "ID: " + makeID();
     setTimeout(() => {
         document.getElementById('loading-screen').classList.add('hidden');
         document.getElementById('settings-screen').classList.remove('hidden');
     }, 3000);
 };
+ش
