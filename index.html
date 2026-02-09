@@ -1,1 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlueBet Mini App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <div class="main-background"></div>
+
+    <div id="loading-screen">
+        <img src="assets/logo.png" class="loading-logo">
+        <div class="loader-container">
+            <div class="loader-fill"></div>
+        </div>
+        <p>Loading BlueBet...</p>
+    </div>
+
+    <div id="settings-screen" class="hidden">
+        <div class="settings-card">
+            <div class="card-header">
+                <img src="assets/ic_lang_ar.png" class="header-icon">
+                <h2>Account Settings</h2>
+            </div>
+            
+            <div class="input-group">
+                <input type="text" id="username" placeholder="Enter Username">
+            </div>
+
+            <div class="input-group">
+                <input type="text" id="user-id" readonly>
+            </div>
+
+            <div class="select-row">
+                <img src="assets/ic_lang_ar.png" class="small-icon">
+                <select id="language">
+                    <option value="en">English</option>
+                    <option value="fr">Français</option>
+                    <option value="ar">العربية</option>
+                    <option value="ru">Русский</option>
+                    <option value="hi">हिन्दी</option>
+                    <option value="es">Español</option>
+                </select>
+            </div>
+
+            <div class="select-row">
+                <img src="assets/ic_currency.png" class="small-icon">
+                <select id="currency">
+                    <option value="DZD">DZD - Algerian Dinar</option>
+                    <option value="USD">USD - US Dollar</option>
+                    <option value="EUR">EUR - Euro</option>
+                    <option value="RUB">RUB - Russian Ruble</option>
+                    <option value="INR">INR - Indian Rupee</option>
+                    <option value="GBP">GBP - British Pound</option>
+                    <option value="USDT">USDT - Tether</option>
+                    <option value="BTC">BTC - Bitcoin</option>
+                    <option value="ETH">ETH - Ethereum</option>
+                    <option value="LTC">LTC - Litecoin</option>
+                </select>
+            </div>
+
+            <button id="start-btn" class="gold-btn">Enter Dashboard</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
