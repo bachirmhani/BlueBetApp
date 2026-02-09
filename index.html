@@ -17,42 +17,31 @@
 
     <div id="settings-screen" class="screen hidden">
         <div class="glass-panel">
-            <h2 id="settings-title">Account Settings</h2>
+            <h2 id="st-title">Account Settings</h2>
             
-            <div class="field">
-                <input type="text" id="username" placeholder="Username">
-            </div>
-            
-            <div class="field">
-                <input type="text" id="user-id" readonly>
-            </div>
+            <input type="text" id="username" placeholder="Username">
+            <input type="text" id="user-id" readonly>
 
-            <div class="field select-box">
-                <img src="assets/ic_lang_ar.png" class="field-icon">
-                <select id="lang-select" onchange="changeLanguage()">
+            <div class="row">
+                <img src="assets/ic_lang_ar.png" class="row-icon">
+                <select id="lang-select" onchange="updateLang()">
                     <option value="en">English</option>
                     <option value="ar">العربية</option>
                     <option value="fr">Français</option>
                     <option value="ru">Русский</option>
                     <option value="hi">हिन्दी</option>
-                    <option value="es">Español</option>
                 </select>
             </div>
 
-            <div class="field select-box">
-                <img src="assets/ic_currency.png" class="field-icon">
+            <div class="row">
+                <img src="assets/ic_currency.png" class="row-icon">
                 <select id="curr-select">
-                    <option value="DZD">DZD - Algerian Dinar</option>
-                    <option value="USD">USD - US Dollar</option>
-                    <option value="EUR">EUR - Euro</option>
-                    <option value="RUB">RUB - Russian Ruble</option>
-                    <option value="INR">INR - Indian Rupee</option>
-                    <option value="SAR">SAR - Saudi Riyal</option>
-                    <option value="AED">AED - UAE Dirham</option>
-                    <option value="USDT">USDT - Tether</option>
-                    <option value="BTC">BTC - Bitcoin</option>
-                    <option value="ETH">ETH - Ethereum</option>
-                    <option value="SOL">SOL - Solana</option>
+                    <option>DZD - Algerian Dinar</option>
+                    <option>USD - US Dollar</option>
+                    <option>EUR - Euro</option>
+                    <option>RUB - Russian Ruble</option>
+                    <option>USDT - Tether</option>
+                    <option>BTC - Bitcoin</option>
                 </select>
             </div>
 
