@@ -2,66 +2,61 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BlueBet Mini App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>BlueBet Pro</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <div class="main-background"></div>
+    <div class="main-bg"></div>
 
     <div id="loading-screen">
-        <img src="assets/logo.png" class="loading-logo">
-        <div class="loader-container">
-            <div class="loader-fill"></div>
-        </div>
-        <p>Loading BlueBet...</p>
+        <img src="assets/logo.png" class="loader-logo">
+        <div class="bar-container"><div class="bar-fill"></div></div>
+        <p id="loading-text">Loading...</p>
     </div>
 
-    <div id="settings-screen" class="hidden">
-        <div class="settings-card">
-            <div class="card-header">
-                <img src="assets/ic_lang_ar.png" class="header-icon">
-                <h2>Account Settings</h2>
+    <div id="settings-screen" class="screen hidden">
+        <div class="glass-panel">
+            <h2 id="settings-title">Account Settings</h2>
+            
+            <div class="field">
+                <input type="text" id="username" placeholder="Username">
             </div>
             
-            <div class="input-group">
-                <input type="text" id="username" placeholder="Enter Username">
-            </div>
-
-            <div class="input-group">
+            <div class="field">
                 <input type="text" id="user-id" readonly>
             </div>
 
-            <div class="select-row">
-                <img src="assets/ic_lang_ar.png" class="small-icon">
-                <select id="language">
+            <div class="field select-box">
+                <img src="assets/ic_lang_ar.png" class="field-icon">
+                <select id="lang-select" onchange="changeLanguage()">
                     <option value="en">English</option>
-                    <option value="fr">Français</option>
                     <option value="ar">العربية</option>
+                    <option value="fr">Français</option>
                     <option value="ru">Русский</option>
                     <option value="hi">हिन्दी</option>
                     <option value="es">Español</option>
                 </select>
             </div>
 
-            <div class="select-row">
-                <img src="assets/ic_currency.png" class="small-icon">
-                <select id="currency">
+            <div class="field select-box">
+                <img src="assets/ic_currency.png" class="field-icon">
+                <select id="curr-select">
                     <option value="DZD">DZD - Algerian Dinar</option>
                     <option value="USD">USD - US Dollar</option>
                     <option value="EUR">EUR - Euro</option>
                     <option value="RUB">RUB - Russian Ruble</option>
                     <option value="INR">INR - Indian Rupee</option>
-                    <option value="GBP">GBP - British Pound</option>
+                    <option value="SAR">SAR - Saudi Riyal</option>
+                    <option value="AED">AED - UAE Dirham</option>
                     <option value="USDT">USDT - Tether</option>
                     <option value="BTC">BTC - Bitcoin</option>
                     <option value="ETH">ETH - Ethereum</option>
-                    <option value="LTC">LTC - Litecoin</option>
+                    <option value="SOL">SOL - Solana</option>
                 </select>
             </div>
 
-            <button id="start-btn" class="gold-btn">Enter Dashboard</button>
+            <button id="entry-btn">Enter Dashboard</button>
         </div>
     </div>
 
